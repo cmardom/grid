@@ -1,0 +1,52 @@
+
+@import '_variables.scss';
+@import '_mixins.scss';
+*{
+    box-sizing: border-box;
+}
+
+body{
+    max-width: 100%;
+    height: calc(100vh - 75px); /*25*4(gap*columnas)*/
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, calc(25% - 75px/4));
+    grid-template-rows: 15% 35% 35% 15%;
+    grid-gap: 25px;
+}
+
+header{
+    background-color: $color_header;
+    grid-row: 1 / 2;
+    grid-column: 1 / 5;
+    color: white;
+    text-align: center;
+}
+
+main{
+    background-color: $color_main;
+    grid-row: 2 / 3;
+    grid-column: 1 / 5;
+
+    @include screen_desktop{
+        grid-row: 2 / 4;
+        grid-column: 1 / 4;
+    }
+}
+
+aside{
+    background-color: $color_aside;
+    grid-row: 3 / 4;
+    grid-column: 1 / 5;
+
+    @include screen_desktop{
+        grid-row: 2 / 4;
+        grid-column: 4 / 5;
+    }
+}
+
+footer{
+    background-color: $color_footer;
+    grid-row: 4 / 5;
+    grid-column: 1 / 5;
+}

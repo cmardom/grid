@@ -1,0 +1,67 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "header"
+    "main"
+    "aside"
+    "footer";
+
+    @include screen_desktop{
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-areas: 
+        "header header header header"
+        "main main main aside"
+        "main main main aside"
+        "footer footer footer footer";
+    }
+    
+
+
+}
+
+header{
+    background-color: $color_header;
+    grid-area: header;
+    text-align: center;
+    color: white;
+}
+
+main{
+    /*Se deberán de ir
+ajustando según el ancho del navegador sin utilizar las media querys. 
+Estos artículos se deben
+alinear desde arriba. Y el ancho mínimo de cada uno será 200px.*/
+    background-color: $color_main;
+    grid-area: main;
+    display: grid;
+    grid-gap: 2px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    align-items: start; //alineación vertical hacia arriba
+
+    article{
+        /*¿Como poner un articulo en cada cuadrado?: quitando rows se hace automatico*/
+        background-color: $color_articulo;
+    }
+
+
+}
+
+aside{
+    background-color: $color_aside;
+    grid-area: aside;
+}
+
+footer{
+    background-color: $color_footer;
+    grid-area: footer;
+
+}

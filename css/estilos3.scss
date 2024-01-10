@@ -1,0 +1,40 @@
+@import '_variables.scss';
+@import '_mixins.scss';
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 15% 35% 35% 15%;
+    grid-template-areas: 
+    "header header header header"
+    "main main main aside"
+    "main main main aside"
+    "footer footer footer footer";
+    gap: 5px;
+
+}
+
+header{
+    background-color: $color_header;
+    grid-area: header;
+    color: white;
+    text-align: center;
+}
+
+main{
+    background-color: $color_main;
+    grid-area: main;
+}
+
+aside{
+    background-color: $color_aside;
+    grid-area: aside;
+}
+
+footer{
+    background-color: $color_footer;
+    grid-area: footer;
+}

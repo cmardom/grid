@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /*4 filas 4 columnas
+  col 25%
+  row 12 35 35 15*/
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 15% 35% 35% 15%;
+}
+
+header {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  background-color: yellow;
+}
+
+main {
+  grid-row-start: 2;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  border: 1px solid green;
+}
+
+aside {
+  background-color: red;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  grid-column-start: 4;
+  grid-column-end: 5;
+}
+
+footer {
+  background-color: orange;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  grid-column-start: 1;
+  grid-column-end: 5;
+}/*# sourceMappingURL=styles.css.map */

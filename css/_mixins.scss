@@ -1,0 +1,11 @@
+@mixin screen_phone{
+    @media screen and (min-width: $min_screen_phone){
+        @content;
+    }
+}
+
+@mixin screen_desktop{
+    @media screen and (min-width: $min_screen_desktop){
+        @content;
+    }
+}

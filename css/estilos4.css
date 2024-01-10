@@ -1,0 +1,53 @@
+@charset "UTF-8";
+/*Medidas mínimas de dispositivos*/
+/*Colores para las secciones*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "main" "aside" "footer";
+}
+@media screen and (min-width: 1200px) {
+  body {
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-areas: "header header header header" "main main main aside" "main main main aside" "footer footer footer footer";
+  }
+}
+
+header {
+  background-color: #fb7b54;
+  grid-area: header;
+  text-align: center;
+  color: white;
+}
+
+main {
+  /*Se deberán de ir
+  ajustando según el ancho del navegador sin utilizar las media querys. 
+  Estos artículos se deben
+  alinear desde arriba. Y el ancho mínimo de cada uno será 200px.*/
+  background-color: #8b0404;
+  grid-area: main;
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  align-items: start;
+}
+main article {
+  /*¿Como poner un articulo en cada cuadrado?: quitando rows se hace automatico*/
+  background-color: #cf98c5;
+}
+
+aside {
+  background-color: #759a91;
+  grid-area: aside;
+}
+
+footer {
+  background-color: #000080;
+  grid-area: footer;
+}/*# sourceMappingURL=estilos4.css.map */

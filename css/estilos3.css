@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/*Medidas mínimas de dispositivos*/
+/*Colores para las secciones*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 15% 35% 35% 15%;
+  grid-template-areas: "header header header header" "main main main aside" "main main main aside" "footer footer footer footer";
+  gap: 5px;
+}
+
+header {
+  background-color: #fb7b54;
+  grid-area: header;
+  color: white;
+  text-align: center;
+}
+
+main {
+  background-color: #8b0404;
+  grid-area: main;
+}
+
+aside {
+  background-color: #759a91;
+  grid-area: aside;
+}
+
+footer {
+  background-color: #000080;
+  grid-area: footer;
+}/*# sourceMappingURL=estilos3.css.map */
